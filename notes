@@ -1,0 +1,40 @@
+NO validations
+association, through or has many belogns to
+manipluate data from one collection and do that one way or anther
+many different select/checkbox?
+codechallange: 75 minutes
+
+what labs:
+
+Tommorow:
+build app by your self in groups
+star up app by your self, then build app
+
+
+What code code challenge content:
+routes
+mvc structure, routes how form, controller, controller to models interaction
+how controller interact with views
+how to fill out forms to make something
+how to build out associations
+request response cycle
+
+
+
+*********************************
+
+Create migrations and models for doctor, patient, and appointment.
+doctor can have many patients,
+        name: "Derek Shepherd", department:
+patient can also have many doctors.
+        name: "Bill Gates", age: 60)
+Patients and doctors both have many appointments.
+appointmentshave a column  appointment_datetime to represent the date and time the appointment will take place.
+ (When you display this datetime, make sure it's in a human readable format.
+ The tests will be expecting "January 12, 2016 at 3:00".)
+     appointment_datetime: DateTime.new(2016, 10, 1), doctor: @mcdreamy, patient: @patient1
+
+
+rails g resource Doctor name department   --no-test-framework
+rails g resource Patient name age:integer   --no-test-framework
+rails g resource Appointment appointment_datetime:DateTime doctor_id:integer patient_id:integer --no-test-framework

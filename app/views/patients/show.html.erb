@@ -1,0 +1,14 @@
+"January 11, 2016 at 20:20"
+
+<%@patient.appointments do |appointment|%>
+<!-- < %=appointment.appointment_datetime%><br> -->
+<!-- < %=appointment.appointment_datetime.strftime(%B %e, %Y at %k:%M)%><br> -->
+<!-- <%=appointment.appointment_datetime.class%><br>  ActiveSupport::TimeWithZone -->
+<!-- <%#=DateTime.new(appointment.appointment_datetime.to_s)%><br>   -->
+<%=appointment.appointment_datetime%><br>
+<%end%>
+
+
+<%@patient.doctors.each do |doctor|%>
+<%=link_to doctor.name, doctor_path(doctor)%><br>
+<%end%>

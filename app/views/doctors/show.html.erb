@@ -1,0 +1,17 @@
+<%=@doctor.name%><br>
+<%=@doctor.department%><br>
+<%@doctor.appointments.map do |appointment|%>
+<!-- < %=appointment.appointment_datetime%><br> -->
+<!-- < %=appointment.appointment_datetime.strftime(%B %e, %Y at %k:%M)%><br> -->
+<!-- <%=appointment.appointment_datetime.class%><br>  ActiveSupport::TimeWithZone -->
+<!-- <%#=DateTime.new(appointment.appointment_datetime.to_s)%><br>   -->
+<%=appointment.appointment_datetime%><br>
+<%end%>
+<br>  <% " Thanks for viewing"%> <br>
+<%@doctor.patients.each do |patient|%>
+<%=link_to patient.name, patient_path(patient)%><br>
+<%end%>
+
+
+January 11, 2016 at 20:20
+%B %e, %Y at %k:%M
